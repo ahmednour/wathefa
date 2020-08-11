@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "wathefa";
+    src: url("fonts/wathefa.eot");
+    /* IE9*/
+    src: url("fonts/wathefa.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("fonts/wathefa.woff2") format("woff2"), /* chrome、firefox */
+    url("fonts/wathefa.woff") format("woff"), /* chrome、firefox */
+    url("fonts/wathefa.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("fonts/wathefa.svg#Droid Arabic Kufi") format("svg");
+    /* iOS 4.1- */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
