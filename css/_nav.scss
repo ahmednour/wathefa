@@ -19,6 +19,9 @@
         padding: 22px 45px 22px 32.5px;
         background-color: transparent;
         border-left: 1px solid #E2E2E2;
+        @include media-breakpoint-down(sm) {
+            padding: 31px 19px 30px 31.5px !important;
+        }
     }
     nav {
         padding: 22px 63.2px;
@@ -69,6 +72,20 @@
         opacity: 1;
         width: 100%;
         visibility: visible;
+    }
+    &.scrolled {
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        margin-top: -130px;
+        &.awake {
+            margin-top: 0px;
+            transition: .3s all ease-out;
+        }
+        &.sleep {
+            transition: .3s all ease-out;
+        }
     }
 }
 
