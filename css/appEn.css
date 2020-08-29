@@ -31,7 +31,7 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+  --breakpoint-xl: 1400px;
   --font-family-sans-serif: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -583,9 +583,9 @@ pre code {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .container {
-    max-width: 1140px;
+    max-width: 1366px;
   }
 }
 
@@ -1469,7 +1469,7 @@ pre code {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1940,7 +1940,7 @@ pre code {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1399.98px) {
   .table-responsive-xl {
     display: block;
     width: 100%;
@@ -4414,7 +4414,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1399.98px) {
   .navbar-expand-xl > .container,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
@@ -4422,7 +4422,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .navbar-expand-xl {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -6702,7 +6702,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .d-xl-none {
     display: none !important;
   }
@@ -7492,7 +7492,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .flex-xl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -7702,7 +7702,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .float-xl-left {
     float: left !important;
   }
@@ -8910,7 +8910,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .m-xl-0 {
     margin: 0 !important;
   }
@@ -9226,7 +9226,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .text-xl-left {
     text-align: left !important;
   }
@@ -9445,7 +9445,6 @@ a.text-dark:hover, a.text-dark:focus {
 /*floating*/
 .top-nav {
   background-color: #fff;
-  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -10167,11 +10166,11 @@ ul {
   background: #fff;
   border-radius: 7px;
   padding: 30px 16px;
-  margin-top: -9px;
+  margin-top: -5px;
 }
 
 .services .card {
-  margin: 15.4px;
+  margin: 7.5px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -10205,7 +10204,7 @@ ul {
 }
 
 .services .card .card-body {
-  padding: 0.75rem;
+  padding: 0.75rem 0.50rem;
 }
 
 .services .card .card-body a {
@@ -10215,6 +10214,12 @@ ul {
 
 .services .card .card-body a:hover {
   text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  .services .card .card-body a {
+    font-size: 14px;
+  }
 }
 
 .services .card .card-body .stretched-link::after {
@@ -10227,6 +10232,28 @@ ul {
   pointer-events: auto;
   content: "";
   background-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 767.98px) {
+  .services .card .card-body {
+    padding: 0.75rem 0.30rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services #searchjob .row,
+  .services #freelance .row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (calc(85%))[9];
+        grid-template-columns: repeat(9, calc(85%));
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x proximity;
+        scroll-snap-type: x proximity;
+    -ms-grid-rows: minmax(150px, 1fr);
+        grid-template-rows: minmax(150px, 1fr);
+    grid-gap: 10px;
+  }
 }
 
 .jobs h2 {
@@ -10242,7 +10269,9 @@ ul {
 }
 
 .jobs .btn-all {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: end;
   font-size: 18px;
   font-weight: bold;
@@ -10250,6 +10279,13 @@ ul {
   text-decoration: none;
   padding-right: 40px;
   position: relative;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 575.98px) {
@@ -10293,6 +10329,7 @@ ul {
   font-size: 28px;
   font-weight: bold;
   color: #404040;
+  margin-bottom: 0.8rem;
 }
 
 @media (max-width: 767.98px) {
@@ -10437,6 +10474,21 @@ ul {
   }
 }
 
+@media (max-width: 767.98px) {
+  .jobs .row.jobs-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (calc(85%))[9];
+        grid-template-columns: repeat(9, calc(85%));
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x proximity;
+        scroll-snap-type: x proximity;
+    -ms-grid-rows: minmax(150px, 1fr);
+        grid-template-rows: minmax(150px, 1fr);
+    grid-gap: 10px;
+  }
+}
+
 .jobapply .bl-dark {
   background-image: url(../img/bg1.svg);
   background-size: cover;
@@ -10530,15 +10582,15 @@ ul {
 
 .jobapply .call-to-act-caption .bat-call-to-act {
   background-color: #00ABA5;
-  padding: 11px 65px;
+  padding: 11px 15px;
   font-size: 18px;
   font-weight: 500;
   border-radius: 5px;
   color: #fff;
   position: absolute;
   bottom: 0;
-  right: 20%;
-  left: 20%;
+  right: 15%;
+  left: 15%;
 }
 
 @media (max-width: 767.98px) {
@@ -10806,9 +10858,9 @@ ul {
 
 @media (max-width: 767.98px) {
   .ftco-footer .top-footer h2 {
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -10868,9 +10920,9 @@ ul {
 
 @media (max-width: 767.98px) {
   .ftco-footer .bottom-footer h2 {
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
