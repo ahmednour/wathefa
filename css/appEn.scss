@@ -414,10 +414,10 @@ ul {
         background: $white;
         @include border-radius(7px);
         padding: 30px 16px;
-        margin-top: -9px;
+        margin-top: -5px;
     }
     .card {
-        margin: 15.4px;
+        margin: 7.5px;
         overflow: hidden;
         @include border-radius(10px);
         .image-zoom {
@@ -450,12 +450,15 @@ ul {
             }
         }
         .card-body {
-            padding: 0.75rem;
+            padding: 0.75rem 0.50rem;
             a {
                 color: #404040;
                 font-size: 18px;
                 &:hover {
                     text-decoration: none;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
                 }
             }
             .stretched-link::after {
@@ -468,6 +471,22 @@ ul {
                 pointer-events: auto;
                 content: "";
                 background-color: rgba(0, 0, 0, 0);
+            }
+            @include media-breakpoint-down (sm) {
+                padding: 0.75rem 0.30rem;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        #searchjob,
+        #freelance {
+            .row {
+                display: grid;
+                grid-template-columns: repeat(9, calc(85%));
+                overflow-x: scroll;
+                scroll-snap-type: x proximity;
+                grid-template-rows: minmax(150px, 1fr);
+                grid-gap: 10px;
             }
         }
     }
@@ -483,7 +502,7 @@ ul {
         }
     }
     .btn-all {
-        display: block;
+        display: flex;
         text-align: end;
         font-size: 18px;
         font-weight: bold;
@@ -491,6 +510,9 @@ ul {
         text-decoration: none;
         padding-right: 40px;
         position: relative;
+        justify-content: flex-end;
+        height: 100%;
+        align-items: center;
         @include media-breakpoint-down(xs) {
             font-size: 13px;
         }
@@ -525,6 +547,7 @@ ul {
                     font-size: 28px;
                     font-weight: bold;
                     color: $tc1;
+                    margin-bottom: 0.8rem;
                     @include media-breakpoint-down(sm) {
                         font-size: 20px
                     }
@@ -632,6 +655,16 @@ ul {
     @include media-breakpoint-down(sm) {
         padding-top: 0px;
     }
+    @include media-breakpoint-down(sm) {
+        .row.jobs-cards {
+            display: grid;
+            grid-template-columns: repeat(9, calc(85%));
+            overflow-x: scroll;
+            scroll-snap-type: x proximity;
+            grid-template-rows: minmax(150px, 1fr);
+            grid-gap: 10px;
+        }
+    }
 }
 
 .jobapply {
@@ -705,15 +738,15 @@ ul {
         }
         .bat-call-to-act {
             background-color: $mc;
-            padding: 11px 65px;
+            padding: 11px 15px;
             font-size: 18px;
             font-weight: 500;
             @include border-radius(5px);
             color: $white;
             position: absolute;
             bottom: 0;
-            right: 20%;
-            left: 20%;
+            right: 15%;
+            left: 15%;
             @include media-breakpoint-down (sm) {
                 font-size: 14px;
                 right: 5%;
@@ -928,7 +961,7 @@ ul {
             justify-content: center;
             align-items: center;
             @include media-breakpoint-down(sm) {
-                justify-content: right;
+                justify-content: left;
                 align-items: baseline;
             }
         }
@@ -968,7 +1001,7 @@ ul {
             justify-content: center;
             align-items: center;
             @include media-breakpoint-down(sm) {
-                justify-content: right;
+                justify-content: left;
                 align-items: baseline;
             }
         }
