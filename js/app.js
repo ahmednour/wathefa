@@ -141,5 +141,7 @@ AOS.init({
         }, { offset: '95%' });
     };
     contentWayPoint();
-
+    setTimeout(function() {
+        $('.preloader').fadeOut();
+    }, 3000);
 })(jQuery);
